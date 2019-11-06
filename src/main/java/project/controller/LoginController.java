@@ -45,6 +45,7 @@ public class LoginController {
         String password = users.getPassword();
         String name = users.getName();
         Users exists = userService.getByUserName(userName);
+        System.out.println(userName + " " + password);
 
         // Check whether the user exists in the database and checks that the
         // input fields are not null

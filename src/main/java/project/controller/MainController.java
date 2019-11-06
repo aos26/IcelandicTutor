@@ -37,7 +37,7 @@ public class MainController {
         session.removeAttribute("login");
         session.setAttribute("error", "User logged out");
 
-        return "redirect:/Index";
+        return "redirect:/login";
     }
 }
 
