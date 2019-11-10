@@ -43,6 +43,12 @@ public class RegisterController {
             model.addAttribute("error","User already exists");
             return "/register";
         }
+
+        // Make sure fields are not empty
+        if(users.getPassword().equals("") || users.getUserName().equals("") || users.getName().equals("")) {
+            model.addAttribute("error", "Fill in all sections");
+            return "/register";
+        }
         //users.setPassword(BCrypt.hashpw(users.getPassword(), BCrypt.gensalt()));
         users.setPassword(users.getPassword());     //TODO hash password
         userService.save(users);
