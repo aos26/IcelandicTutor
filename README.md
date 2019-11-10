@@ -2,6 +2,8 @@
  
 ## PosrgreSQL
 
+### Mac
+
 Check if postgres is running:
 
 <pre><code>brew services restart postgresql
@@ -32,9 +34,12 @@ To check if andrea is a user then you can do the following command:
 <pre><code>\du
 </code></pre>
 
+### Windows
 
 
 ## Java8
+
+### Mac
 
 If the program is not running it could be because you don't have Java 8
 
@@ -55,5 +60,5 @@ There you can see which java version you are using and you can change it by push
 </code></pre>
 
 
-
+### Windows
 
