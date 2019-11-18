@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--<spring:url value="/resources/css/homepage.css" var="homepageCss"/>-->
+    <!--<spring:url value="/resources/css/category.css" var="categoryCss"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/homepage.css"/>"/>
 
@@ -22,6 +22,8 @@
 
 </header>
 
+
+
 <body>
 <div class="header">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -30,7 +32,7 @@
                 <a class="navbar-brand" href="#">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="homepage"><a onclick="location.href = '/homepage'">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
                 <li><a href="#">Page 3</a></li>
@@ -41,52 +43,28 @@
         </div>
     </nav>
 </div>
-
 <div class="container-fluid">
     <div class="mainContainer">
         <div class="card-group">
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 categoryCard card1">
+                    <div class="card mx-3 levelCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="store" value="Store" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level1" value="Store" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 categoryCard card2">
+                    <div class="card mx-3 levelCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="shop" value="Shop" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level2" value="Level 2" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 categoryCard card3">
+                    <div class="card mx-3 levelCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="activity" value="Act" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row my-1" style="margin-top: 20px;">
-                <div class="col-sm-4  text-center">
-                    <div class="card mx-3 categoryCard card4">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="cat1" value="cat1" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="card mx-3 categoryCard card5">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="cat2" value="cat2" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="card mx-3 categoryCard card6">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="cat3" value="cat3" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level3" value="Level 3" />
                         </div>
                     </div>
                 </div>
@@ -98,3 +76,23 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
