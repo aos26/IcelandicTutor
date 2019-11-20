@@ -27,10 +27,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">IcelandicTutor</a>
+                <a class="navbar-brand" onclick="location.href = '/homepage'">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a onclick="location.href = '/homepage'">Home</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
                 <li><a href="#">Page 3</a></li>
@@ -41,32 +41,29 @@
         </div>
     </nav>
 </div>
-<div class="container-fluid">
 
+<div class="container-fluid">
     <div class="mainContainer">
         <div class="card-group">
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <h2 class="card-title">Category Name 1</h2>
-                            <a href="#" class="btn btn-primary">Select</a>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="store" value="Store" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <h2 class="card-title">Category Name 2</h2>
-                            <a href="#" class="btn btn-primary">Select</a>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="shop" value="Shop" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <h2 class="card-title">Category Name 3</h2>
-                            <a href="#" class="btn btn-primary">Select</a>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="activity" value="Act" />
                         </div>
                     </div>
                 </div>
@@ -75,24 +72,21 @@
                 <div class="col-sm-4  text-center">
                     <div class="card mx-3 categoryCard card4">
                         <div class="card-body cardMiddle">
-                            <h2 class="card-title">Category Name 4</h2>
-                            <a href="#" class="btn btn-primary">Select</a>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="cat1" value="cat1" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card5">
                         <div class="card-body cardMiddle">
-                            <h2 class="card-title">Category Name 5</h2>
-                            <a href="#" class="btn btn-primary">Select</a>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="cat2" value="cat2" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card6">
                         <div class="card-body cardMiddle">
-                            <h2 class="card-title">Category Name 6</h2>
-                            <a href="#" class="btn btn-primary">Select</a>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="cat3" value="cat3" />
                         </div>
                     </div>
                 </div>
