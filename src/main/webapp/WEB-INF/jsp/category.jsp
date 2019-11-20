@@ -50,7 +50,7 @@
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 levelCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level1" value="Store" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level1" value="Level 1" />
                         </div>
                     </div>
                 </div>
