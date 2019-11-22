@@ -45,26 +45,27 @@
 </div>
 <div class="container-fluid">
     <div class="mainContainer">
+        <h2>${name}</h2>
         <div class="card-group">
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 levelCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level1" value="Level 1" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/1'" id="level1" value="Level 1" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 levelCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level2" value="Level 2" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/2'" id="level2" value="Level 2" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 levelCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game'" id="level3" value="Level 3" />
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/3'" id="level3" value="Level 3" />
                         </div>
                     </div>
                 </div>
