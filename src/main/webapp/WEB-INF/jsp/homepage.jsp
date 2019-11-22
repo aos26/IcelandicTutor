@@ -49,14 +49,14 @@
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="store" value="Store" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/1'" id="animals" value="Animals" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category'" id="shop" value="Shop" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/2'" id="clothing" value="Clothing" />
                         </div>
                     </div>
                 </div>

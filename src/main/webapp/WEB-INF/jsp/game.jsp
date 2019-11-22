@@ -42,6 +42,28 @@
     </nav>
 </div>
 
+<div class="container-fluid">
+    <div class="mainContainer">
+        <div>
+            <h2>${question}</h2>
+        </div>
+        <div>
+            <div>
+                <input type="button" class="btn btn-primary" value="${answer}" />
+            </div>
+            <div>
+                <input type="button" class="btn btn-primary" value="${wrongAnswer1}" />
+            </div>
+            <div>
+                <input type="button" class="btn btn-primary" value="${wrongAnswer2}" />
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
 </body>
 
 </html>
