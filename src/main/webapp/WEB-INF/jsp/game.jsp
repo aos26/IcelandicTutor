@@ -2,6 +2,7 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 
 <html lang="en">
 
@@ -44,22 +45,23 @@
 
 <div class="container-fluid">
     <div class="mainContainer">
+        <sf:form method="POST" action="/game/${cat_id}/${lvl_id}">
         <div>
             <h2>${question}</h2>
         </div>
         <div>
             <div>
-                <input type="button" class="btn btn-primary" value="${answer}" />
+                <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${answer}" name="answer" />
             </div>
             <div>
-                <input type="button" class="btn btn-primary" value="${wrongAnswer1}" />
+                <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer1}" name="wrongAnswer1" />
             </div>
             <div>
-                <input type="button" class="btn btn-primary" value="${wrongAnswer2}" />
+                <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer2}" name="wrongAnswer2"/>
             </div>
 
         </div>
-
+        </sf:form>
 
     </div>
 </div>

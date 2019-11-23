@@ -16,6 +16,7 @@ import project.service.LevelService;
 import project.service.CategoryService;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -42,10 +43,12 @@ public class GameController {
         if (loggedInUser != null) {
             model.addAttribute("msg", loggedInUser.getName());
             List<Question> question = questionService.getQuestionByCatIdAndLvlId(cat_id, lvl_id);
-            model.addAttribute("question", question.get(0).getQuestionWord());
-            model.addAttribute("answer", question.get(0).getAnswer());
-            model.addAttribute("wrongAnswer1", question.get(0).getWrongAnswer1());
-            model.addAttribute("wrongAnswer2", question.get(0).getWrongAnswer2());
+            int lengd = question.size();
+            int index = (int)(Math.random()*lengd);
+            model.addAttribute("question", question.get(index).getQuestionWord());
+            model.addAttribute("answer", question.get(index).getAnswer());
+            model.addAttribute("wrongAnswer1", question.get(index).getWrongAnswer1());
+            model.addAttribute("wrongAnswer2", question.get(index).getWrongAnswer2());
 
             return "game";
         }
@@ -54,4 +57,26 @@ public class GameController {
         return "redirect:/login";
     }
 
+    @RequestMapping(value = "/game/{cat_id}/{lvl_id}", method = RequestMethod.POST)
+    public String getAnswerPost(@PathVariable("cat_id") Long cat_id, @PathVariable("lvl_id") Long lvl_id, HttpSession session, Model model, HttpServletRequest request){
+        Users loggedInUser = (Users) session.getAttribute("login");
+        if (loggedInUser != null) {
+            model.addAttribute("msg", loggedInUser.getName());
+
+            session.setAttribute();
+            if (request.getParameter("answer") != null) {
+                System.out.println("rett svar!");
+
+
+            }
+            else {System.out.println("Rangt svar");}
+            game(cat_id, lvl_id, session, model);
+
+
+            return "game";
+        }
+
+        session.setAttribute("error", "User must be logged in!");
+        return "redirect:/login";
+    }
 }
