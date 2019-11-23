@@ -62,8 +62,7 @@ public class GameController {
         Users loggedInUser = (Users) session.getAttribute("login");
         if (loggedInUser != null) {
             model.addAttribute("msg", loggedInUser.getName());
-
-            session.setAttribute();
+            
             if (request.getParameter("answer") != null) {
                 System.out.println("rett svar!");
 
