@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface UserService {
 
+
     /**
      * save a {@Link Users}
      * @param users {@Link Users} to be saved
@@ -52,4 +53,6 @@ public interface UserService {
 
 
     Users getByUserName(String userName);
+
+    List<Users> getScoreOrder();
 }

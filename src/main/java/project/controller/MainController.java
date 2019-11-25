@@ -79,4 +79,20 @@ public class MainController {
         session.setAttribute("error", "User must be logged in!");
         return "redirect:/login";
     }
+
+
+    // Request mapping to "localhost:8080/dictionary"
+    // user must be logged in to access the page, otherwise they are
+    // redirected to the login page
+    @RequestMapping(value = "/dictionary", method = RequestMethod.GET)
+    public String dictionary(HttpSession session, Model model) {
+        Users loggedInUser = (Users) session.getAttribute("login");
+        if (loggedInUser != null) {
+            model.addAttribute("msg", loggedInUser.getName());
+            return "dictionary";
+        }
+
+        session.setAttribute("error", "User must be logged in!");
+        return "redirect:/login";
+    }
 }

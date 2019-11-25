@@ -2,6 +2,7 @@ package project.service.Implementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import project.persistence.entities.Question;
 import project.persistence.entities.Users;
 import project.persistence.repositories.UserRepository;
 import project.service.UserService;
@@ -40,4 +41,8 @@ public class UserServiceImplementation implements UserService{
         return userRepository.getByUserName(userName);
     }
 
+    @Override
+    public List<Users> getScoreOrder() {
+        return userRepository.getScoreOrder();
+    }
 }

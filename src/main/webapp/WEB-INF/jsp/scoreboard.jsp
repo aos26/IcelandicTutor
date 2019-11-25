@@ -2,13 +2,12 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 
 <html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--<spring:url value="/resources/css/game.css" var="gameCss"/>-->
+    <!--<spring:url value="/resources/css/scoreboard.css" var="scoreboardCss"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/homepage.css"/>"/>
 
@@ -22,6 +21,8 @@
 <header>
 
 </header>
+
+
 
 <body>
 <div class="header">
@@ -41,26 +42,28 @@
         </div>
     </nav>
 </div>
-
 <div class="container-fluid">
     <div class="mainContainer">
-        <sf:form method="POST" action="/game/${cat_id}/${lvl_id}">
         <div>
-            <h2>${question}</h2>
+            <h2>Top scorers</h2>
         </div>
         <div>
             <div>
-                <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${answer}" name="answer" />
+                <p>1. ${name1}  ${score1}</p>
             </div>
             <div>
-                <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer1}" name="wrongAnswer1" />
+                <p>2. ${name2}  ${score2}</p>
             </div>
             <div>
-                <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer2}" name="wrongAnswer2"/>
+                <p>3. ${name3}  ${score3}</p>
             </div>
-
         </div>
-        </sf:form>
+        <div>
+            <h2>Your score</h2>
+            <div>
+                <p>${name} ${score}</p>
+            </div>
+        </div>
 
     </div>
 </div>
@@ -68,3 +71,5 @@
 </body>
 
 </html>
+
+
