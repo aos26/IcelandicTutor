@@ -42,40 +42,13 @@
         </div>
     </nav>
 </div>
-<div class="container-fluid">
-    <div class="mainContainer">
-        <h2>Welcome to the Dictionary</h2>
-        <h3>Select the category you want to take a closer look at</h3>
-        <div class="card-group">
-            <div class="row my-1">
-                <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card1">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/dictionary/1'" value="Animals" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card2">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/dictionary/2'" value="Clothing" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card3">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" id="level3" value="Level 3" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div>
+    <c:forEach var="listItem" items="${isl}" varStatus="theCount" >
+        <tr><td>${listItem}       </td> <td>${ensk[theCount.index]}</td></tr><p></p>
+    </c:forEach>
 </div>
+
 
 </body>
 
 </html>
-
-

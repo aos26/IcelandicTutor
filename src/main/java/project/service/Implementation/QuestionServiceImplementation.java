@@ -38,4 +38,9 @@ public class QuestionServiceImplementation implements QuestionService {
     public List<Question> getQuestionByCatIdAndLvlId(Long cat_id, Long lvl_id) {
         return questionRepository.getQuestionByCatIdAndLvlId(cat_id, lvl_id);
     }
+
+    @Override
+    public List<Question> getAllQuestionByCat(Long cat_id){
+        return questionRepository.getAllQuestionByCat(cat_id);
+    }
 }
