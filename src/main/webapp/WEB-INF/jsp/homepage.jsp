@@ -31,9 +31,8 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a onclick="location.href = '/homepage'">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
+                <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
             <div>
                 <input type="button" class="btn btn-primary logoutbtn" onclick="location.href = '/logout'" value="Logout" />

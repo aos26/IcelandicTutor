@@ -18,4 +18,6 @@ public interface UserRepository extends JpaRepository<Users, Long > {
     @Query(value = "SELECT p FROM Users p WHERE p.userName = ?1")
     Users getByUserName(String userName);
 
+    @Query(value = "SELECT p FROM Users p order by p.score desc")
+    List<Users> getScoreOrder();
 }
