@@ -44,20 +44,50 @@
 
 <div class="container-fluid">
     <div class="mainContainer">
+        <div>
+            ${svarMsg}
+        </div>
         <sf:form method="POST" action="/game/${cat_id}/${lvl_id}">
             <div>
                 <h2>${question}</h2>
             </div>
             <div>
-                <div>
-                    <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${answer}" name="answer" />
-                </div>
-                <div>
-                    <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer1}" name="wrongAnswer1" />
-                </div>
-                <div>
-                    <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer2}" name="wrongAnswer2"/>
-                </div>
+                <c:choose>
+                    <c:when test="${order == 0}">
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${answer}" name="answer" />
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer1}" name="wrongAnswer1" />
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer2}" name="wrongAnswer2"/>
+                        </div>
+                    </c:when>
+                    <c:when test="${order == 1}">
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer1}" name="wrongAnswer1" />
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${answer}" name="answer" />
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer2}" name="wrongAnswer2"/>
+                        </div>
+                    </c:when>
+                    <c:when test="${order == 2}">
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer1}" name="wrongAnswer1" />
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${wrongAnswer2}" name="wrongAnswer2"/>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" onclick="location.href = '/game/${cat_id}/${lvl_id}'" value="${answer}" name="answer" />
+                        </div>
+                    </c:when>
+                </c:choose>
+
 
             </div>
         </sf:form>

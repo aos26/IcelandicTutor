@@ -26,6 +26,8 @@ public class GameController {
     private LevelService levelService;
     private CategoryService categoryService;
     private QuestionService questionService;
+    private Integer score = 0;
+    private Integer questionNR = 0;
 
     @Autowired
     public GameController(UserService userService, LevelService levelService, CategoryService categoryService, QuestionService questionService)
@@ -45,6 +47,8 @@ public class GameController {
             List<Question> question = questionService.getQuestionByCatIdAndLvlId(cat_id, lvl_id);
             int lengd = question.size();
             int index = (int)(Math.random()*lengd);
+            int randomOrder = (int)(Math.random()*3);
+            model.addAttribute("order", randomOrder);
             model.addAttribute("question", question.get(index).getQuestionWord());
             model.addAttribute("answer", question.get(index).getAnswer());
             model.addAttribute("wrongAnswer1", question.get(index).getWrongAnswer1());
@@ -64,11 +68,29 @@ public class GameController {
             model.addAttribute("msg", loggedInUser.getName());
             
             if (request.getParameter("answer") != null) {
-                System.out.println("rett svar!");
+                model.addAttribute("svarMsg", "Rétt svar!");
+                this.score += 1;
+                System.out.println("rett svar! " + this.score);
 
 
             }
-            else {System.out.println("Rangt svar");}
+            else {
+                System.out.println("Rangt svar");
+                model.addAttribute("svarMsg", "Rangt svar!");
+            }
+            this.questionNR += 1;
+            if(score == 10){
+                //Reikna score nota loggedInUser
+                Integer currScore = loggedInUser.getScore();
+                int incorrect = questionNR - score;
+                int new_score = (score*10)-(incorrect*5);
+                if (new_score < 0) {new_score = 0;}
+                loggedInUser.setScore(new_score + currScore);
+                userService.save(loggedInUser);
+
+                return "redirect:/scoreboard";
+            }
+
             game(cat_id, lvl_id, session, model);
 
 
