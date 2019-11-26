@@ -84,17 +84,37 @@ public class GameController {
                 Integer currScore = loggedInUser.getScore();
                 int incorrect = questionNR - score;
                 int new_score = (score*10)-(incorrect*5);
-                if (new_score < 0) {new_score = 0;}
+                model.addAttribute("Stig",new_score);
+                model.addAttribute("Texti","Your total score just got higher!");
+                if (new_score < 0) {
+                    new_score = 0;
+                    model.addAttribute("Texti","We don't want to lower your score so this will not count!");
+                }
                 loggedInUser.setScore(new_score + currScore);
                 userService.save(loggedInUser);
 
-                return "redirect:/scoreboard";
+                return "redirect:/gamecomplete";
             }
 
             game(cat_id, lvl_id, session, model);
 
 
             return "game";
+        }
+
+        session.setAttribute("error", "User must be logged in!");
+        return "redirect:/login";
+    }
+
+    // Request mapping to "localhost:8080/gamecomplete"
+    // user must be logged in to access the page, otherwise they are
+    // redirected to the login page
+    @RequestMapping(value = "/gamecomplete", method = RequestMethod.GET)
+    public String dictionary(HttpSession session, Model model) {
+        Users loggedInUser = (Users) session.getAttribute("login");
+        if (loggedInUser != null) {
+            model.addAttribute("msg", loggedInUser.getName());
+            return "gamecomplete";
         }
 
         session.setAttribute("error", "User must be logged in!");
