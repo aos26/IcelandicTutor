@@ -37,6 +37,9 @@
             </ul>
             <div>
                 <input type="button" class="btn btn-primary logoutbtn" onclick="location.href = '/logout'" value="Logout" />
+                <span style="float: right" class="navbar-text">
+                    Hello, ${msg}
+                </span>
             </div>
         </div>
     </nav>
@@ -49,7 +52,14 @@
         </div>
         <sf:form method="POST" action="/game/${cat_id}/${lvl_id}">
             <div>
-                <h2>${question}</h2>
+                <c:choose>
+                    <c:when test="${lvl_id == 1}">
+                        <h2>${question}</h2>
+                    </c:when>
+                    <c:when test="${lvl_id == 3}">
+                        <img src="${questionImg}">
+                    </c:when>
+                </c:choose>
             </div>
             <div>
                 <c:choose>

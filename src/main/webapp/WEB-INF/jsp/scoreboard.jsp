@@ -33,11 +33,14 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="homepage"><a onclick="location.href = '/homepage'">Home</a></li>
-                <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
+                <li class="active"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
                 <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
             <div>
                 <input type="button" class="btn btn-primary logoutbtn" onclick="location.href = '/logout'" value="Logout" />
+                <span style="float: right" class="navbar-text">
+                    Hello, ${msg}
+                </span>
             </div>
         </div>
     </nav>

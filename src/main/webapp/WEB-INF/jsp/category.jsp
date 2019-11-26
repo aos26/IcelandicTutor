@@ -38,6 +38,9 @@
             </ul>
             <div>
                 <input type="button" class="btn btn-primary logoutbtn" onclick="location.href = '/logout'" value="Logout" />
+                <span style="float: right" class="navbar-text">
+                    Hello, ${msg}
+                </span>
             </div>
         </div>
     </nav>
