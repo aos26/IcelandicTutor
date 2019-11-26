@@ -92,6 +92,7 @@ public class GameController {
                 }
                 loggedInUser.setScore(new_score + currScore);
                 userService.save(loggedInUser);
+                this.score=0;
 
                 return "redirect:/gamecomplete";
             }
