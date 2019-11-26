@@ -16,11 +16,13 @@ public class Question {
     private String wrongAnswer2;
     private Long cat_id;
     private Long lvl_id;
+    private String question_image;
 
     public Question() {
     }
 
-    public Question(Long id, String questionWord, String answer, String wrongAnswer1, String wrongAnswer2, Long cat_id, Long lvl_id) {
+    public Question(Long id, String questionWord, String answer, String wrongAnswer1,
+                    String wrongAnswer2, Long cat_id, Long lvl_id, String question_image) {
         this.id = id;
         this.questionWord = questionWord;
         this.answer = answer;
@@ -28,6 +30,7 @@ public class Question {
         this.wrongAnswer2 = wrongAnswer2;
         this.cat_id = cat_id;
         this.lvl_id = lvl_id;
+        this.question_image = question_image;
     }
 
     public Long getId() {
@@ -84,5 +87,13 @@ public class Question {
 
     public void setLvl_id(Long lvl_id) {
         this.lvl_id = lvl_id;
+    }
+
+    public String getQuestion_image() {
+        return question_image;
+    }
+
+    public void setQuestion_image(String question_image) {
+        this.question_image = question_image;
     }
 }

@@ -38,15 +38,17 @@
             </ul>
             <div>
                 <input type="button" class="btn btn-primary logoutbtn" onclick="location.href = '/logout'" value="Logout" />
+                <span style="float: right" class="navbar-text">
+                    Hello, ${msg}
+                </span>
             </div>
         </div>
     </nav>
 </div>
 
 <h1>You finished the game!</h1>
-<h2>You got points ${Stig}</h2>
-<h2>${Texti}</h2>
-
+<h2>You got ${gameScore} points</h2>
+<h2>You got ${rightQuestions} out of ${questionsAnswered}</h2>
 <h3>If you want to see your score, click here:</h3>
 <input type="button" class="btn btn-primary game" onclick="location.href = '/scoreboard'" value="Scoreboard" />
 <h3>If you didn't do well, go to the dictionary and read over the words</h3>
