@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--<spring:url value="/resources/css/dictionary.css" var="dictionaryCss"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/homepage.css"/>"/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/scoreboard.css"/>"/>
 
 
     <!-- jQuery library -->
@@ -45,7 +45,7 @@
         </div>
     </nav>
 </div>
-
+<div class="mainContainer" >
 <h1>You finished the game!</h1>
 <h2>You got ${gameScore} points</h2>
 <h2>You got ${rightQuestions} out of ${questionsAnswered}</h2>
@@ -53,6 +53,8 @@
 <input type="button" class="btn btn-primary game" onclick="location.href = '/scoreboard'" value="Scoreboard" />
 <h3>If you didn't do well, go to the dictionary and read over the words</h3>
 <input type="button" class="btn btn-primary game" onclick="location.href = '/dictionary'" value="Dictionary" />
+</div>
+
 
 </body>
 
