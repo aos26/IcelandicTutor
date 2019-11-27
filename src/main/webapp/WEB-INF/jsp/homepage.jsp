@@ -27,10 +27,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" onclick="location.href = '/homepage'">IcelandicTutor</a>
+                <a class="navbar-brand active" onclick="location.href = '/homepage'">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a onclick="location.href = '/newgame'">Game</a></li>
+                <li class="newgame"><a onclick="location.href = '/newgame'">Category</a></li>
                 <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
                 <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
@@ -51,21 +51,24 @@
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/newgame'" id="animals" value="Start a new game" />
+                            <h3>Start learning Icelandic now by playing the game!</h3>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/newgame'" id="animals" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/dictionary'" id="clothing" value="Go to the dictionary" />
+                            <h3>Not sure if you know any Icelandic words? Go to the dictionary and have an overview</h3>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/dictionary'" id="clothing" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/scoreboard'" id="activity" value="Check the scoreboard" />
+                            <h3>Want to see how you are improving? Check your score!</h3>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/scoreboard'" id="activity" value="Select" />
                         </div>
                     </div>
                 </div>

@@ -32,7 +32,7 @@
                 <a class="navbar-brand" onclick="location.href = '/homepage'">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a onclick="location.href = '/newgame'">Game</a></li>
+                <li class="game"><a onclick="location.href = '/newgame'">Category</a></li>
                 <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
                 <li class="active"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>

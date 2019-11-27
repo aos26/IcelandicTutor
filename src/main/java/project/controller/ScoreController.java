@@ -42,6 +42,18 @@ public class ScoreController {
             model.addAttribute("score2", users.get(1).getScore());
             model.addAttribute("name3", users.get(2).getUserName());
             model.addAttribute("score3", users.get(2).getScore());
+            int userscore = loggedInUser.getScore();
+            String username = loggedInUser.getUserName();
+            int count = 0;
+            int place = 0;
+            while(count<users.size()){
+                if(username.equals(users.get(count).getUserName() ) && userscore==users.get(count).getScore()){
+                    place = count + 1;
+                    model.addAttribute("place",place);
+                    count = users.size();
+                }
+                count +=1;
+            }
             //model.addAttribute("answer", question.get(index).getAnswer());
             //model.addAttribute("wrongAnswer1", question.get(index).getWrongAnswer1());
             //model.addAttribute("wrongAnswer2", question.get(index).getWrongAnswer2());
