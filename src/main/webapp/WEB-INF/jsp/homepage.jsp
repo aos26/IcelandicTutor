@@ -52,15 +52,15 @@
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
                             <h3>Start learning Icelandic now by playing the game!</h3>
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/newgame'" id="animals" value="Select" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/newgame'" id="startGame" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <h3>Not sure if you know any Icelandic words? Go to the dictionary and have an overview</h3>
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/dictionary'" id="clothing" value="Select" />
+                            <h3>Not sure if you know any Icelandic words? Go to the dictionary for an overview</h3>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/dictionary'" id="dictionary" value="Select" />
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
                             <h3>Want to see how you are improving? Check your score!</h3>
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/scoreboard'" id="activity" value="Select" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/scoreboard'" id="scoreBoard" value="Select" />
                         </div>
                     </div>
                 </div>
