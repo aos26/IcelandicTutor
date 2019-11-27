@@ -51,21 +51,25 @@
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/1'" id="animals" value="Animals" />
+                            <h1>Animals</h1>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/1'" id="animals" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/2'" id="clothing" value="Clothing" />
+                            <h1>Clothing</h1>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/2'" id="clothing" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="activity" value="House" />
+                            <h1>Numbers and dates</h1>
+                            <input type="button" class="btn btn-primary category" id="activity" value="Select" />
+                            <h3>Coming soon...</h3>
                         </div>
                     </div>
                 </div>
@@ -74,21 +78,27 @@
                 <div class="col-sm-4  text-center">
                     <div class="card mx-3 categoryCard card4">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat1" value="Sports" />
+                            <h1>Adjectives</h1>
+                            <input type="button" class="btn btn-primary category" id="cat1" value="Select" />
+                            <h3>Coming soon...</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card5">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat2" value="Food" />
+                            <h1>Sports</h1>
+                            <input type="button" class="btn btn-primary category" id="cat2" value="Select" />
+                            <h3>Coming soon...</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card6">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat3" value="School" />
+                            <h1>School</h1>
+                            <input type="button" class="btn btn-primary category" id="cat3" value="Select" />
+                            <h3>Coming soon...</h3>
                         </div>
                     </div>
                 </div>

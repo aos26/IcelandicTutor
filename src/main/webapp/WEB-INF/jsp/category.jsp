@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--<spring:url value="/resources/css/category.css" var="categoryCss"/>-->
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/category.css"/>"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/homepage.css"/>"/>
 
@@ -47,7 +47,7 @@
 </div>
 <div class="container-fluid">
     <div class="mainContainer">
-        <h2>${name}</h2>
+        <h1 class="categoryName">${name}</h1>
         <div class="card-group">
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
