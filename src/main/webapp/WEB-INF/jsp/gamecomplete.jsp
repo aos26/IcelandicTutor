@@ -49,7 +49,7 @@
 <h1>You finished the game!</h1>
 <h2>You got ${gameScore} points</h2>
 <h2>You got ${rightQuestions} out of ${questionsAnswered}</h2>
-<h3>If you want to see your score, click here:</h3>
+<h3>If you want to see your overall score, go to the scoreboard</h3>
 <input type="button" class="btn btn-primary game" onclick="location.href = '/scoreboard'" value="Scoreboard" />
 <h3>If you didn't do well, go to the dictionary and read over the words</h3>
 <input type="button" class="btn btn-primary game" onclick="location.href = '/dictionary'" value="Dictionary" />
