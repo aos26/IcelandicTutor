@@ -34,6 +34,17 @@ To check if andrea is a user then you can do the following command:
 <pre><code>\du
 </code></pre>
 
+Next we create the database
+
+<pre><code>CREATE DATABASE tutor;
+</code></pre>
+
+And grant "andrea" all privileges
+
+<pre><code>GRANT ALL PRIVILEGES ON DATABASE tutor TO andrea;
+</code></pre>
+
+
 ### Windows
 
 
@@ -61,4 +72,19 @@ There you can see which java version you are using and you can change it by push
 
 
 ### Windows
+
+
+
+## IntelliJ
+
+### Mac
+
+Choose the Database option on the right-sidebar and add a Data Source -> PostgeSQL
+
+Fill out the admin (andrea) and password (12345).
+
+In a zip-file on Ugla is a tutor_script.sql file you should run and 4 .csv datatables.
+
+
+
 
