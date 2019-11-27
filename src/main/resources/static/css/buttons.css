@@ -1,0 +1,27 @@
+
+body {
+    margin: 0 20px;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+.logoutbtn {
+    float: right;
+    margin-top: 8px;
+    background-color: white;
+    color: black;
+}
+
+.game {
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 90px;
+    height: 40px;
+}
+
+
+.card-group {
+
+}

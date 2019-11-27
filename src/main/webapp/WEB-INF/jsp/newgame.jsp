@@ -7,9 +7,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--<spring:url value="/resources/css/buttons.css" var="dictionaryCss"/>-->
+    <!--<spring:url value="/resources/css/homepage.css" var="homepageCss"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/buttons.css"/>"/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/homepage.css"/>"/>
 
 
     <!-- jQuery library -->
@@ -22,8 +22,6 @@
 
 </header>
 
-
-
 <body>
 <div class="header">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -34,7 +32,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a onclick="location.href = '/newgame'">Game</a></li>
                 <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
-                <li class="active"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
+                <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
             <div>
                 <input type="button" class="btn btn-primary logoutbtn" onclick="location.href = '/logout'" value="Logout" />
@@ -45,30 +43,52 @@
         </div>
     </nav>
 </div>
+
 <div class="container-fluid">
     <div class="mainContainer">
-        <h2>Welcome to the Dictionary</h2>
-        <h3>Select the category you want to take a closer look at</h3>
         <div class="card-group">
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card1">
+                    <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="game" onclick="location.href = '/dictionary/1/1'" value="Animals" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/1'" id="animals" value="Animals" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card2">
+                    <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="game" onclick="location.href = '/dictionary/2/1'" value="Clothing" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/2'" id="clothing" value="Clothing" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card3">
+                    <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="game" id="level3" value="Level 3" />
+                            <input type="button" class="btn btn-primary category" id="activity" value="House" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-1" style="margin-top: 20px;">
+                <div class="col-sm-4  text-center">
+                    <div class="card mx-3 categoryCard card4">
+                        <div class="card-body cardMiddle">
+                            <input type="button" class="btn btn-primary category" id="cat1" value="Sports" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="card mx-3 categoryCard card5">
+                        <div class="card-body cardMiddle">
+                            <input type="button" class="btn btn-primary category" id="cat2" value="Food" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="card mx-3 categoryCard card6">
+                        <div class="card-body cardMiddle">
+                            <input type="button" class="btn btn-primary category" id="cat3" value="School" />
                         </div>
                     </div>
                 </div>
@@ -80,5 +100,3 @@
 </body>
 
 </html>
-
-

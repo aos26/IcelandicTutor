@@ -49,21 +49,22 @@ public class MainController {
         return "redirect:/login";
     }
 
-
-    /*
-    // Method that redirects to a category
-    @RequestMapping(value = "/category", method = RequestMethod.GET)
-    public String category(HttpSession session, Model model){
+    // Request mapping to "localhost:8080/homepage"
+    // user must be logged in to access the page, otherwise they are
+    // redirected to the login page
+    @RequestMapping(value = "/newgame", method = RequestMethod.GET)
+    public String newgame(HttpSession session, Model model) {
         Users loggedInUser = (Users) session.getAttribute("login");
         if (loggedInUser != null) {
             model.addAttribute("msg", loggedInUser.getName());
-            return "category";
+            return "newgame";
         }
 
         session.setAttribute("error", "User must be logged in!");
         return "redirect:/login";
     }
-    */
+
+
     // Method that redirects to a category
     @RequestMapping(value = "/category/{cat_id}", method = RequestMethod.GET)
     public String categoryGetCategory(@PathVariable Long cat_id, HttpSession session, Model model){

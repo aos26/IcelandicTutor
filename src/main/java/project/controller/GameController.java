@@ -76,7 +76,7 @@ public class GameController {
             model.addAttribute("msg", loggedInUser.getName());
             
             if (request.getParameter("answer") != null) {
-                model.addAttribute("svarMsg", "Rétt svar!");
+                model.addAttribute("svarMsg", "Your previous question was correct!");
                 this.score += 1;
                 //System.out.println("rett svar! " + this.score);
 
@@ -84,7 +84,7 @@ public class GameController {
             }
             else {
                 //System.out.println("Rangt svar");
-                model.addAttribute("svarMsg", "Rangt svar!");
+                model.addAttribute("svarMsg", "Your previous question was wrong:(");
             }
             this.questionNR += 1;
             if(score == 10){
