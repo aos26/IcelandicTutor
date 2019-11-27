@@ -45,29 +45,34 @@
         </div>
     </nav>
 </div>
+
 <div class="container-fluid">
     <div class="mainContainer">
-        <h2>${name}</h2>
+        <h1>${name}</h1>
+        <h2>Select a level</h2>
         <div class="card-group">
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card1">
+                    <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/1'" id="level1" value="Level 1" />
+                            <h3>Level 1</h3>
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/1'" id="level1" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card2">
+                    <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/2'" id="level2" value="Level 2" />
+                            <h3>Level 2</h3>
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/2'" id="level2" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card3">
+                    <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/3'" id="level3" value="Level 3" />
+                            <h3>Level 3</h3>
+                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/3'" id="level3" value="Select" />
                         </div>
                     </div>
                 </div>

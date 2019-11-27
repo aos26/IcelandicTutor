@@ -47,25 +47,29 @@
 <div class="container-fluid">
     <div class="mainContainer">
         <div class="card-group">
+            <h2>Select a category</h2>
             <div class="row my-1">
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/1'" id="animals" value="Animals" />
+                            <h3>Animals</h3>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/1'" id="animals" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/2'" id="clothing" value="Clothing" />
+                            <h3>Clothing</h3>
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/2'" id="clothing" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="activity" value="House" />
+                            <h3>House</h3>
+                            <input type="button" class="btn btn-primary category" id="activity" value="Select" />
                         </div>
                     </div>
                 </div>
@@ -74,21 +78,24 @@
                 <div class="col-sm-4  text-center">
                     <div class="card mx-3 categoryCard card4">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat1" value="Sports" />
+                            <h3>Sports</h3>
+                            <input type="button" class="btn btn-primary category" id="cat1" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card5">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat2" value="Food" />
+                            <h3>Food</h3>
+                            <input type="button" class="btn btn-primary category" id="cat2" value="Select" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card6">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat3" value="School" />
+                            <h3>School</h3>
+                            <input type="button" class="btn btn-primary category" id="cat3" value="Select" />
                         </div>
                     </div>
                 </div>
