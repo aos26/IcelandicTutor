@@ -23,7 +23,7 @@
 <sf:form method="POST" modelAttribute="users" action="/login">
     <div style="color: blue" align="center">${msg}</div>
     <div class="form-group">
-        <label for="exampeInputUsername">Username</label>
+        <label for="exampleInputUsername">Username</label>
         <input type="text" name="userName" class="form-control" id="exampleInputUsername" placeholder="Enter username">
     </div>
     <div class="form-group">

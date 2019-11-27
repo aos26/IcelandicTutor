@@ -18,4 +18,6 @@ public interface QuestionRepository extends JpaRepository<Question, Long > {
     @Query(value = "SELECT q FROM Question q WHERE q.cat_id = ?1 order by q.questionWord")
     List<Question> getAllQuestionByCat(Long cat_id);
 
+    @Query(value = "SELECT q.id FROM Question q ORDER BY q.id DESC")
+    List<Long> getNextId();
 }
