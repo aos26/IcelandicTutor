@@ -50,20 +50,32 @@
        <sf:form name="adminForm" method="POST" modelAttribute="addQuestion" action="/admin">
            <table>
                <div class="form-group">
-                   <label path="questionWord">questionWord</label>
+                   <label path="questionWord">Question</label>
                    <sf:input type="text" path="questionWord" name="questionWord" class="form-control" placeholder="Enter word" />
                </div>
                <div class="form-group">
-                   <label path="answer">answer</label>
+                   <label path="answer">Answer</label>
                    <sf:input type="text" path="answer" name="answer" class="form-control" placeholder="Enter answer"/>
                </div>
                <div class="form-group">
-                   <label path="wrongAnswer1">wrongAnswer1</label>
+                   <label path="wrongAnswer1">Wrong Answer 1</label>
                    <sf:input type="text" path="wrongAnswer1" name="wrongAnswer1" class="form-control" placeholder="Enter wrong answer"/>
                </div>
                <div class="form-group">
-                   <label path="wrongAnswer2">wrongAnswer1</label>
+                   <label path="wrongAnswer2">Wrong Answer 2</label>
                    <sf:input type="text" path="wrongAnswer2" name="wrongAnswer2" class="form-control" placeholder="Enter wrong answer"/>
+               </div>
+               <div class="form-group">
+                   <label path="cat_id">Category number</label>
+                   <form:select path="cat_id" items="${categoryList}" class="form-control"/>
+               </div>
+               <div class="form-group">
+                   <label path="lvl_id">Level number</label>
+                   <form:select path="lvl_id" items="${levelList}" class="form-control"/>
+               </div>
+               <div class="form-group">
+                   <label path="question_image">Image URL (optional)</label>
+                   <sf:input type="text" path="question_image" name="question_image" class="form-control" placeholder="Enter image URL"/>
                </div>
                <input type="submit" class="btn btn-primary login" value="Submit" />
            </table>

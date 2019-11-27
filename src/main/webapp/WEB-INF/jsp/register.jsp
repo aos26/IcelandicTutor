@@ -8,60 +8,33 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Register Form</title>
-    <!--<link rel="stylesheet" type="text/css" href="<c:url value="/css/register.css"/>"/>-->
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/register.css"/>"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
+<h3>Welcome to</h3>
+<h1>IcelandicTutor</h1>
 <sf:form name="registerForm" modelAttribute="createUser" method="POST" action="/register">
-    <div style="color: blue" >${msg}</div>
-    <table align="center">
-        <tr>
-            <td>
-                <label path="name">Name:</label>
-            </td>
-            <td>
-                <sf:input type="text" path="name" name="name" id="name" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label path="userName">User Name:</label>
-            </td>
-            <td>
-                <sf:input path="userName" name="userName" id="userName" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label path="password">Password:</label>
-            </td>
-            <td>
-                <sf:input type="password" path="password" name="password" id="password" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label path="email">Email:</label>
-            </td>
-            <td>
-                <sf:input type="email" path="email" name="email" id="email" />
-            </td>
-        </tr>
-        <tr class = "registerButton">
-            <td>
-                <sf:button id="register" name="register">Register</sf:button>
-            </td>
-        </tr>
-        <tr class = "return">
-            <td class = "home">
-                <a href="/">Home</a>
-            </td>
-            <td class = "login">
-                <a href="/login">Login</a>
-
-            </td>
-        </tr>
-    </table>
-    <div style="color: red">${error}</div>
+    <div style="color: blue" align="center">${msg}</div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <sf:input type="text" path="name" name="name" class="form-control" id="name" />
+    </div>
+    <div class="form-group">
+        <label for="userName">Username</label>
+        <sf:input path="userName" name="userName" class="form-control" id="userName" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <sf:input type="password" path="password" name="password" class="form-control" id="password" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <sf:input type="email" path="email" name="email" class="form-control" id="email" />
+    </div>
+    <sf:button id="register" name="register" class="btn btn-primary register">Register</sf:button>
+    <a href="/login" class="btn btn-primary login">Already a member? Log in!</a>
+    <div style="color: red" align="center">${error}</div>
 </sf:form>
 </body>
 </html>

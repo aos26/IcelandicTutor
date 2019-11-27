@@ -26,9 +26,11 @@ public class GameController {
     private LevelService levelService;
     private CategoryService categoryService;
     private QuestionService questionService;
-    private Integer score = 0;
-    private Integer questionNR = 0;
+    private Integer score;
+    private Integer questionNR;
     private Integer new_score = 0;
+    private Long current_lvl_id;
+    private Long current_cat_id;
 
     @Autowired
     public GameController(UserService userService, LevelService levelService, CategoryService categoryService, QuestionService questionService)
@@ -37,6 +39,8 @@ public class GameController {
         this.levelService = levelService;
         this.categoryService = categoryService;
         this.questionService = questionService;
+        this.score = 0;
+        this.questionNR = 0;
     }
 
     // Go to game
@@ -45,6 +49,13 @@ public class GameController {
         Users loggedInUser = (Users) session.getAttribute("login");
         if (loggedInUser != null) {
             model.addAttribute("msg", loggedInUser.getName());
+            System.out.println(current_cat_id + " lvl: " + current_lvl_id);
+            if(current_lvl_id != lvl_id || current_cat_id != cat_id){
+                this.score = 0;
+                this.questionNR = 0;
+            }
+            model.addAttribute("currScore", this.score);
+            model.addAttribute("questionNR", this.questionNR);
             List<Question> question = questionService.getQuestionByCatIdAndLvlId(cat_id, lvl_id);
 
             int lengd = question.size();
@@ -76,7 +87,9 @@ public class GameController {
             model.addAttribute("msg", loggedInUser.getName());
             
             if (request.getParameter("answer") != null) {
-                model.addAttribute("svarMsg", "Your previous question was correct!");
+
+                model.addAttribute("svarMsg", "Your previous answer was correct!");
+
                 this.score += 1;
                 //System.out.println("rett svar! " + this.score);
 
@@ -84,7 +97,9 @@ public class GameController {
             }
             else {
                 //System.out.println("Rangt svar");
-                model.addAttribute("svarMsg", "Your previous question was wrong:(");
+
+                model.addAttribute("svarMsg", "Your previous answer was incorrect!");
+
             }
             this.questionNR += 1;
             if(score == 10){
@@ -93,18 +108,16 @@ public class GameController {
                 int incorrect = questionNR - score;
                 //int new_score = (score*10)-(incorrect*5);
                 this.new_score = (score*10)-(incorrect*5);
-                //model.addAttribute("Stig",new_score);
-                //model.addAttribute("Texti","Your total score just got higher!");
                 if (this.new_score < 0) {
                     this.new_score = 0;
-                    //model.addAttribute("Texti","We don't want to lower your score so this will not count!");
                 }
                 loggedInUser.setScore(new_score + currScore);
                 userService.save(loggedInUser);
 
                 return "redirect:/gamecomplete";
             }
-
+            current_cat_id = cat_id;
+            current_lvl_id = lvl_id;
             game(cat_id, lvl_id, session, model);
 
 
