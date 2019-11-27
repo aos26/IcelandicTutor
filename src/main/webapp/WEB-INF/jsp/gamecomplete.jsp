@@ -29,10 +29,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">IcelandicTutor</a>
+                <a class="navbar-brand" onclick="location.href = '/homepage'">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="homepage"><a onclick="location.href = '/homepage'">Home</a></li>
+                <li class="active"><a onclick="location.href = '/newgame'">Game</a></li>
                 <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
                 <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
@@ -49,7 +49,7 @@
 <h1>You finished the game!</h1>
 <h2>You got ${gameScore} points</h2>
 <h2>You got ${rightQuestions} out of ${questionsAnswered}</h2>
-<h3>If you want to see your score, click here:</h3>
+<h3>If you want to see your overall score, go to the scoreboard</h3>
 <input type="button" class="btn btn-primary game" onclick="location.href = '/scoreboard'" value="Scoreboard" />
 <h3>If you didn't do well, go to the dictionary and read over the words</h3>
 <input type="button" class="btn btn-primary game" onclick="location.href = '/dictionary'" value="Dictionary" />

@@ -53,12 +53,12 @@ public class DictionaryController {
     }
 
     // Method that redirects to a category
-    @RequestMapping(value = "/dictionary/{cat_id}", method = RequestMethod.GET)
-    public String categoryGetCategory(@PathVariable Long cat_id, HttpSession session, Model model){
+    @RequestMapping(value = "/dictionary/{cat_id}/{lvl_id}", method = RequestMethod.GET)
+    public String categoryGetCategory(@PathVariable("cat_id") Long cat_id, @PathVariable("lvl_id") Long lvl_id, HttpSession session, Model model){
         Users loggedInUser = (Users) session.getAttribute("login");
         if (loggedInUser != null) {
             model.addAttribute("msg", loggedInUser.getName());
-            List<Question> question = questionService.getAllQuestionByCat(cat_id);
+            List<Question> question = questionService.getAllQuestionByCat(cat_id,lvl_id);
             int teljari = 0;
             int lengd = question.size();
             List<String> isl = new ArrayList<String>();

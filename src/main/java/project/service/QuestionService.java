@@ -33,7 +33,7 @@ public interface QuestionService {
 
     List<Question> getQuestionByCatIdAndLvlId(Long cat_id, Long lvl_id);
 
-    List<Question> getAllQuestionByCat(Long cat_id);
 
     List<Long> getNextId();
+    List<Question> getAllQuestionByCat(Long cat_id, Long lvl_id);
 }

@@ -28,3 +28,18 @@ body {
     background-color: white;
     color: black;
 }
+
+.minnka {
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
