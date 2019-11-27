@@ -28,10 +28,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">IcelandicTutor</a>
+                <a class="navbar-brand" onclick="location.href = '/homepage'">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="homepage"><a onclick="location.href = '/homepage'">Home</a></li>
+                <li class="active"><a onclick="location.href = '/newgame'">Game</a></li>
                 <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
                 <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
@@ -48,15 +48,16 @@
 <div class="container-fluid">
     <div class="mainContainer">
         <div>
-            ${svarMsg}
+            <h3>${svarMsg}</h3>
         </div>
         <sf:form method="POST" action="/game/${cat_id}/${lvl_id}">
             <div>
                 <c:choose>
                     <c:when test="${lvl_id == 1}">
-                        <h2>${question}</h2>
+                        <h2>What is the English word for: ${question}</h2>
                     </c:when>
                     <c:when test="${lvl_id == 3}">
+                        <h2>What animal is on the picture?</h2>
                         <img src="${questionImg}">
                     </c:when>
                 </c:choose>

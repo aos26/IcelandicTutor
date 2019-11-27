@@ -7,9 +7,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--<spring:url value="/resources/css/dictionary.css" var="dictionaryCss"/>-->
+    <!--<spring:url value="/resources/css/translation.css" var="translationCss"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/homepage.css"/>"/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/translation.css"/>"/>
 
 
     <!-- jQuery library -->
@@ -29,10 +29,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">IcelandicTutor</a>
+                <a class="navbar-brand" onclick="location.href = '/homepage'">IcelandicTutor</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="homepage"><a onclick="location.href = '/homepage'">Home</a></li>
+                <li class="active"><a onclick="location.href = '/newgame'">Game</a></li>
                 <li class="scoreboard"><a onclick="location.href = '/scoreboard'">Scoreboard</a></li>
                 <li class="dictionary"><a onclick="location.href = '/dictionary'">Dictionary</a></li>
             </ul>
@@ -45,10 +45,16 @@
         </div>
     </nav>
 </div>
-<div>
-    <c:forEach var="listItem" items="${isl}" varStatus="theCount" >
-        <tr><td>${listItem}       </td> <td>${ensk[theCount.index]}</td></tr><p></p>
-    </c:forEach>
+<div class="minnka">
+    <table>
+        <tr>
+            <th>Icelandic word</th>
+            <th>English word</th>
+        </tr>
+        <c:forEach var="listItem" items="${isl}" varStatus="theCount" >
+            <tr><td>${listItem}       </td> <td>${ensk[theCount.index]}</td></tr>
+        </c:forEach>
+    </table>
 </div>
 
 
