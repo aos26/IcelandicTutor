@@ -53,4 +53,11 @@ There you can see which java version you are using and you can change it by push
 "Edit" and you will be redirected to SDKs where you can choose **JDK home path**.
 
 
+##IntelliJ
+
+To connect the database in IntelliJ you need to open the database option in the
+right-sidebar and add a Data Source -> PostgreSQL fill out the admin (andrea) and
+password (12345).
+
+
 
