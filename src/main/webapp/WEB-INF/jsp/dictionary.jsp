@@ -54,21 +54,14 @@
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 levelCard card1">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="game" onclick="location.href = '/dictionary/1/1'" value="Animals" />
+                            <input type="button" class="btn btn-primary option" onclick="location.href = '/dictionary/1/1'" value="Animals" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 levelCard card2">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="game" onclick="location.href = '/dictionary/2/1'" value="Clothing" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="card mx-3 levelCard card3">
-                        <div class="card-body cardMiddle">
-                            <input type="button" class="game" id="level3" value="Level 3" />
+                            <input type="button" class="btn btn-primary option" onclick="location.href = '/dictionary/2/1'" value="Clothing" />
                         </div>
                     </div>
                 </div>
