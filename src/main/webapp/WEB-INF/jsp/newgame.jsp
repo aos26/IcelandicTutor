@@ -65,7 +65,7 @@
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="activity" value="House" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/3'" id="housing" value="Housing" />
                         </div>
                     </div>
                 </div>
@@ -74,21 +74,21 @@
                 <div class="col-sm-4  text-center">
                     <div class="card mx-3 categoryCard card4">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat1" value="Sports" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/4'" id="sports" value="Sports" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card5">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat2" value="Food" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/5'" id="food" value="Food" />
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
                     <div class="card mx-3 categoryCard card6">
                         <div class="card-body cardMiddle">
-                            <input type="button" class="btn btn-primary category" id="cat3" value="School" />
+                            <input type="button" class="btn btn-primary category" onclick="location.href = '/category/6 '" id="school" value="School" />
                         </div>
                     </div>
                 </div>
