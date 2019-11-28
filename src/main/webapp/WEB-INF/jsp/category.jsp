@@ -57,7 +57,7 @@
                     <div class="card mx-3 categoryCard card1">
                         <div class="card-body cardMiddle">
                             <h3>Level 1</h3>
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/1'" id="level1" value="Select" />
+                            <input type="button" class="btn btn-primary option" onclick="location.href = '/game/${cat_id}/1'" id="level1" value="Select" />
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="card mx-3 categoryCard card2">
                         <div class="card-body cardMiddle">
                             <h3>Level 2</h3>
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/2'" id="level2" value="Select" />
+                            <input type="button" class="btn btn-primary option" onclick="location.href = '/game/${cat_id}/2'" id="level2" value="Select" />
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="card mx-3 categoryCard card3">
                         <div class="card-body cardMiddle">
                             <h3>Level 3</h3>
-                            <input type="button" class="btn btn-primary game" onclick="location.href = '/game/${cat_id}/3'" id="level3" value="Select" />
+                            <input type="button" class="btn btn-primary option" onclick="location.href = '/game/${cat_id}/3'" id="level3" value="Select" />
                         </div>
                     </div>
                 </div>
