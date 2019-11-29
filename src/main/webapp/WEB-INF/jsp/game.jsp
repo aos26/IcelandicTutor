@@ -58,6 +58,11 @@
                         <h2>Question number ${questionNR + 1}</h2>
                         <h1>${question}</h1>
                     </c:when>
+                    <c:when test="${lvl_id == 2}">
+
+                        <h2>Question number ${questionNR + 1}</h2>
+                        <h1>${question}</h1>
+                    </c:when>
                     <c:when test="${lvl_id == 3}">
                         <h2>Question number ${questionNR + 1}</h2>
 
